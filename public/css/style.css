@@ -4,6 +4,9 @@
 
 
 :root {
+  --white: rgb(255, 255, 255);
+  --blue: rgb(22, 102, 155);
+  --black : rgb(0, 0, 0);
 
 }
 
@@ -16,7 +19,7 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-  background-color: rgb(22, 102, 155);
+  background-color: var(--blue);
   height: 100px;
   align-items: center;
   padding: 0px 20px 0px 20px;
@@ -51,11 +54,15 @@ nav ul {
 }
 
 /*----- Banner and Welcome Info -----*/
+main {
+  min-height: calc(100vh - 234px);
+}
+
 #fig-contain {
   margin-top: 0px;
 }
 
-body {
+#banner {
   margin: 0px;
   background-image: url("../../assets/images/car-lot.jpg");
   background-size: cover;
@@ -74,8 +81,8 @@ body {
 #app-desc {
   justify-content: center;
   text-align: center;
-  background-color: rgb(255, 255, 255);
-  border: 4px solid rgb(22, 102, 155);
+  background-color: var(--white);
+  border: 4px solid var(--blue);
   box-shadow: 10px 10px 8px;
   max-width: 900px;
   min-height: 250px;
@@ -97,4 +104,22 @@ body {
 #app-desc>ul>li {
   text-align: left;
   font-weight: 500;
+}
+
+/*----- Footer -----*/
+#footer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--blue);
+  color: var(--tan);
+  margin-top: 10px;
+  margin-bottom: -1px;
+  padding: 12px;
+  height: 100px
+}
+
+.foot-text {
+  color: var(--black);
+  font-size: 20px;
 }
