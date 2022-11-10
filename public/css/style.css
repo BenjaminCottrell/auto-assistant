@@ -11,13 +11,15 @@ body {
   margin: 0px;
 }
 
+
+/*----- Header / Nav Bar for main page -----*/
 header {
   display: flex;
   justify-content: space-between;
   background-color: rgb(22, 102, 155);
   height: 100px;
   align-items: center;
-  padding: 0px 15px 0px 15px;
+  padding: 0px 20px 0px 20px;
 }
 
 h1 {
@@ -46,4 +48,53 @@ nav ul {
   font-weight: 500;
   margin: 0px;
   padding: 0px 5px 0px 5px;
+}
+
+/*----- Banner and Welcome Info -----*/
+#fig-contain {
+  margin-top: 0px;
+}
+
+body {
+  margin: 0px;
+  background-image: url("../../assets/images/car-lot.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+
+}
+
+#info-box {
+  display: flex;
+  justify-content: center;
+  padding-top: 175px;
+}
+
+#app-desc {
+  justify-content: center;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  border: 4px solid rgb(22, 102, 155);
+  box-shadow: 10px 10px 8px;
+  max-width: 900px;
+  min-height: 250px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+#welcome {
+  font-size: 200%;
+  margin: 10px;
+  text-decoration: underline;
+}
+
+#welcome-info {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+#app-desc>ul>li {
+  text-align: left;
+  font-weight: 500;
 }
