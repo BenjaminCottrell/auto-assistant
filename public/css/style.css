@@ -11,6 +11,8 @@ body {
   margin: 0px;
 }
 
+
+/*----- Header / Nav Bar for main page -----*/
 header {
   display: flex;
   justify-content: space-between;
@@ -46,4 +48,14 @@ nav ul {
   font-weight: 500;
   margin: 0px;
   padding: 0px 5px 0px 5px;
+}
+
+/*----- Header / Nav Bar for main page -----*/
+#banner {
+  background-image: url("../../");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  height: 750px;
 }
