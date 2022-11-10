@@ -1,24 +1,49 @@
-header, .project:not(:last-child) {
-  border-bottom: 1px solid #ccc;
+* {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.no-button {
-  background: none;
-  border: none;
-  padding: 0;
+
+:root {
+
+}
+
+body {
+  margin: 0px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(22, 102, 155);
+  height: 100px;
+  align-items: center;
+  padding: 0px 15px 0px 15px;
+}
+
+h1 {
+  font-size: 250%;
+  margin: 0px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  text-align: center;
+}
+
+#login, #signup {
+  font-size: 150%;
   cursor: pointer;
-  color: #1b89bc;
-  text-decoration: none;
-  font-size: 100%;
 }
 
-.no-button:hover {
-  color: #065b83;
-  text-decoration: underline;
+#login:hover, #signup:hover {
+  font-size: 150%;
+  font-weight: bolder;
 }
 
-.dollar-amount {
-  color: #056605;
-  font-weight: bold;
-  margin-left: -5px;
+.slash {
+  font-size: 150%;
+  font-weight: 500;
+  margin: 0px;
+  padding: 0px 5px 0px 5px;
 }
