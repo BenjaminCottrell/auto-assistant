@@ -27,8 +27,10 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/search', async (req, res) => {
-  res.render('search')
+router.get('/search', withAuth, async (req, res) => {
+  res.render('search', {
+    logged_in: req.session.logged_in
+  });
 });
 
 router.get('/favorite/:id', async (req, res) => {
