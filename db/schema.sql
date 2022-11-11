@@ -1,25 +1,2 @@
 DROP DATABASE IF EXISTS cars_db;
 CREATE DATABASE cars_db;
-
-USE cars_db;
-
-CREATE TABLE user (
-  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  name VARCHAR(30) NOT NULL,
-  email VARCHAR(30) NOT NULL,
-  pass VARCHAR(30) NOT NULL
-);
-
-CREATE TABLE favorite (
-  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  make VARCHAR(30) NOT NULL,
-  model VARCHAR(30) NOT NULL,
-  year INT not NULL,
-  class VARCHAR(30) NOT NULL,
-  drive VARCHAR(30) NOT NULL,
-  trans VARCHAR(30) NOT NULL,
-  cylinders INT,
-  mpg INT NOT NULL,
-  user_id INT,
-  FOREIGN KEY (user_id) REFERENCES user(id)
-);
