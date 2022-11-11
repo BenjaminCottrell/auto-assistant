@@ -6,8 +6,8 @@
 :root {
   --white: rgb(255, 255, 255);
   --blue: rgb(22, 102, 155);
-  --black : rgb(0, 0, 0);
-
+  --black: rgb(0, 0, 0);
+  --gold: rgb(255, 215, 0);
 }
 
 body {
@@ -42,25 +42,46 @@ h1 {
 
 nav ul {
   display: flex;
+  justify-content: end;
   list-style: none;
   text-align: center;
 }
 
-#login, #signup {
+#login, #signup  {
   font-size: 150%;
   cursor: pointer;
 }
 
-#login:hover, #signup:hover {
-  font-size: 150%;
-  font-weight: bolder;
+#slash, #slash:hover {
+  color: var(--black);
 }
 
-.slash {
+#login:hover, #signup:hover {
+  color: gold;
+}
+
+.username{
+  font-size: 130%;
+  font-weight: 600;
+}
+
+.nav-logged-in {
   font-size: 150%;
-  font-weight: 500;
-  margin: 0px;
-  padding: 0px 5px 0px 5px;
+  text-decoration: none;
+}
+
+.nav-hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.nav-hover:link, .nav-hover:visited {
+  color: var(--black);
+}
+
+.nav-hover:hover {
+  font-size: 150%;
+  color: gold;
 }
 
 /*----- Banner and Welcome Info -----*/
