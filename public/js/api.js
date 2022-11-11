@@ -1,9 +1,8 @@
 const request = require('request');
 
 
-//var model = 'camry'
-
 function getCars(model) {
+  // Add conditionals if form isnt fully filled out
     request.get({
   url: 'https://api.api-ninjas.com/v1/cars?&limit=30&model=' + model,
   headers: {
@@ -14,7 +13,8 @@ function getCars(model) {
   else if(response.statusCode != 200) return console.error('Error:', response.statusCode);
   else {
     var cars = JSON.parse(body)
-    console.log(cars[cars.length-1])
+    cars.sort( function ( a, b ) { return b.year - a.year; } );
+    console.log(cars)
     }
 });
 }
