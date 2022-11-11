@@ -123,3 +123,61 @@ main {
   color: var(--black);
   font-size: 20px;
 }
+
+/*----- Login Partial -----*/
+.login-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.login-container, .signup-container {
+  padding: 10px;
+}
+
+.form-container {
+  padding: 5px;
+}
+
+h2 {
+  display: block;
+  margin: 5px;
+}
+
+.vertical-line{
+  border-right: 3px solid var(--blue);
+}
+
+.login-form, .signup-form {
+  text-align: left;
+}
+
+.username, .password {
+  margin-left: 0px;
+}
+
+.form-input {
+  width: 420px;
+  height: 25px;
+  margin: 5px 0px 5px 0px;
+}
+
+.btn-login, .btn-signup {
+  width: 430px;
+  height: 30px;
+  margin: 5px 0px 5px 0px;
+  background-color: rgb(97, 92, 92);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-login:hover, .btn-signup:hover {
+  background-color: rgb(71, 68, 68);
+  font-size: 101%;
+}
+
+.login-signup {
+  text-decoration: none;
+}
+
