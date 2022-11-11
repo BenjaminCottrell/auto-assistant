@@ -11,12 +11,26 @@
 <body id="banner">
     <header>
         <a class="logo" href="/"><h1>AutoAssistant</h1></a>
-        <nav class="stroke">
-            <ul>
-                <li><a href="/login" id="login">Login</a></li>
-                <li><p class="slash">/</p></li>
-                <li><a href="/login" id="signup">Sign Up</a></li>
+        <nav class="">
+            {{#if logged_in}}
+
+            <ul class="user-nav">
+                <li class="username">Username</li>
             </ul>
+            <ul class="user-nav">
+                <li><a class="nav-logged-in nav-hover" href="/" id="">Home</a></li>
+                <li class="nav-logged-in">|</li>
+                <li><a class="nav-logged-in nav-hover" href="/favorites" id="">Favorites</a></li>
+                <li class="nav-logged-in">|</li>
+                <li><a class="nav-logged-in nav-hover" href="/logout" id="">Logout</a></li>
+            </ul>
+
+            {{else}}
+            <ul>
+                <li><a href="/login" id="login">Login <span id="slash">/</span> SignUp</a></li>
+            </ul>
+            {{/if}}
+
         </nav>
     </header>
     <main>
