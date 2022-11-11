@@ -64,7 +64,7 @@ main {
 
 #banner {
   margin: 0px;
-  background-image: url("../../assets/images/car-lot.jpg");
+  background-image: url("/assets/images/car-lot.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
