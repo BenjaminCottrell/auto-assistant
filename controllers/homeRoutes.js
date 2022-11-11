@@ -27,6 +27,10 @@ router.get('/', async (req, res) => {
   }
 });
 
+router.get('/search', async (req, res) => {
+  res.render('search')
+});
+
 router.get('/favorite/:id', async (req, res) => {
   try {
     const favoriteData = await Favorite.findByPk(req.params.id, {
