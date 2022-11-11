@@ -27,9 +27,9 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/search', withAuth, async (req, res) => {
-  
-})
+router.get('/search', async (req, res) => {
+  res.render('search')
+});
 
 router.get('/favorite/:id', async (req, res) => {
   try {
