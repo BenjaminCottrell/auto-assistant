@@ -12,7 +12,10 @@ function getCars(model) {
 }, function(error, response, body) {
   if(error) return console.error('Request failed:', error);
   else if(response.statusCode != 200) return console.error('Error:', response.statusCode);
-  else {console.log(JSON.parse(body))}
+  else {
+    var cars = JSON.parse(body)
+    console.log(cars[cars.length-1])
+    }
 });
 }
 
