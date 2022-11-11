@@ -1,6 +1,5 @@
 const request = require('request');
 
-
 function getCars(model) {
   // Add conditionals if form isnt fully filled out
     request.get({
@@ -18,5 +17,30 @@ function getCars(model) {
     }
 });
 }
+
+const addFavorite = async (event) => {
+  event.preventDefault();
+
+  const make = cars[i].make.trim();
+  const model = cars[i].model.trim();
+  const year = cars[i].year.trim();
+  const type = cars[i].class.trim();
+  const drive = cars[i].drive.trim();
+  const trans = cars[i].trans.trim();
+  const cylinders = cars[i].cylinders.trim();
+  const mpg = cars[i].mpg.trim();
+
+
+  const response = await fetch('/api/favorites', {
+    method: 'POST',
+    body: JSON.stringify({ make, model, year, type, drive, trans, cylinders, mpg }),
+    headers: { 'Content-Type': 'application/json' },
+  });
+
+  if (!response.ok) {
+    alert(response.statusText);
+  }
+};
+
 
 getCars("camry");
