@@ -14,6 +14,15 @@ body {
   margin: 0px;
 }
 
+.logo, #login, #signup {
+  text-decoration: none;
+}
+
+.logo:link, .logo:visited, 
+#login:link, #login:visited,
+#signup:link, #signup:visited {
+  color: var(--black);
+}
 
 /*----- Header / Nav Bar for main page -----*/
 header {
@@ -28,6 +37,7 @@ header {
 h1 {
   font-size: 250%;
   margin: 0px;
+  cursor: pointer;
 }
 
 nav ul {
@@ -162,7 +172,7 @@ h2 {
 }
 
 .btn-login, .btn-signup {
-  width: 430px;
+  width: 428px;
   height: 30px;
   margin: 5px 0px 5px 0px;
   background-color: rgb(97, 92, 92);
