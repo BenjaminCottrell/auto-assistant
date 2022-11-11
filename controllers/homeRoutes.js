@@ -27,6 +27,10 @@ router.get('/', async (req, res) => {
   }
 });
 
+router.get('/search', withAuth, async (req, res) => {
+  
+})
+
 router.get('/favorite/:id', async (req, res) => {
   try {
     const favoriteData = await Favorite.findByPk(req.params.id, {

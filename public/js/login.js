@@ -15,7 +15,7 @@ const loginFormHandler = async (event) => {
 
     if (response.ok) {
       // If successful, redirect the browser to the search page
-      document.location.replace('/');
+      document.location.replace('/search');
     } else {
       alert(response.statusText);
     }
@@ -37,7 +37,7 @@ const signupFormHandler = async (event) => {
     });
     
     if (response.ok) {
-      document.location.replace('/');
+      document.location.replace('/search');
     } else {
       alert(response.statusText);
     }
