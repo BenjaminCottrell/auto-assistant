@@ -156,12 +156,12 @@ main {
 }
 
 /*----- Login Partial -----*/
-.login-wrapper {
+.login-wrapper, .search-wrapper {
   display: flex;
   justify-content: space-evenly;
 }
 
-.login-container, .signup-container {
+.login-container, .signup-container, .search-container {
   padding: 10px;
 }
 
@@ -182,6 +182,10 @@ h2 {
   text-align: left;
 }
 
+.search-form {
+  text-align: right;
+}
+
 .username, .password {
   margin-left: 0px;
 }
@@ -192,7 +196,7 @@ h2 {
   margin: 5px 0px 5px 0px;
 }
 
-.btn-login, .btn-signup {
+.btn-login, .btn-signup, .btn-search {
   width: 428px;
   height: 30px;
   margin: 5px 0px 5px 0px;
