@@ -13,7 +13,6 @@
         <a class="logo" href="/"><h1>AutoAssistant</h1></a>
         <nav class="">
             {{#if logged_in}}
-
             <ul class="user-nav">
                 <li class="username">Username</li>
             </ul>
@@ -24,9 +23,8 @@
                 <li class="nav-logged-in">|</li>
                 <li><a class="nav-logged-in nav-hover" href="/favorites" id="">Favorites</a></li>
                 <li class="nav-logged-in">|</li>
-                <li><a class="nav-logged-in nav-hover" href="/logout" id="">Logout</a></li>
+                <li><a class="nav-logged-in nav-hover"  id="logout">Logout</a></li>
             </ul>
-
             {{else}}
             <ul>
 
@@ -47,5 +45,8 @@
             </p>
           </div>
     </footer>
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
 </body>
 </html>
