@@ -147,12 +147,30 @@ main {
   margin-top: 10px;
   margin-bottom: -1px;
   padding: 12px;
-  height: 100px
+  height: 100px;
+  font-weight: 600;
+  font-style: italic;
 }
 
 .foot-text {
   color: var(--black);
-  font-size: 20px;
+  font-size: 22px;
+  text-decoration: underline;
+}
+
+.foot-name {
+  color: var(--gold);
+
+}
+
+.license {
+  color: var(--gold);
+
+}
+
+.foot-api {
+  color: var(--gold);
+
 }
 
 /*----- Login Partial -----*/
