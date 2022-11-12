@@ -33,6 +33,12 @@ router.get('/search', withAuth, async (req, res) => {
   });
 });
 
+router.get('/results', withAuth, async (req, res) => {
+  res.render('results', {
+    logged_in: req.session.logged_in
+  });
+});
+
 router.get('/favorites', async (req, res) => {
   try {
     // const favoriteData = await Favorite.findAll(req.params.id, {
