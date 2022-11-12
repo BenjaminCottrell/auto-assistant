@@ -33,21 +33,21 @@ router.get('/search', withAuth, async (req, res) => {
   });
 });
 
-router.get('/favorite/:id', async (req, res) => {
+router.get('/favorites', async (req, res) => {
   try {
-    const favoriteData = await Favorite.findByPk(req.params.id, {
-      include: [
-        {
-          model: User,
-          attributes: ['name'],
-        },
-      ],
-    });
+    // const favoriteData = await Favorite.findAll(req.params.id, {
+    //   include: [
+    //     {
+    //       model: User,
+    //       attributes: ['name'],
+    //     },
+    //   ],
+    // });
 
-    const favorite = favoriteData.get({ plain: true });
+    // const favorite = favoriteData.get({ plain: true });
 
-    res.render('favorite', {
-      ...favorite,
+    res.render('favorites', {
+      // ...favorite,
       logged_in: req.session.logged_in
     });
   } catch (err) {
