@@ -31,13 +31,15 @@ router.get('/', async (req, res) => {
 
 router.get('/search', withAuth, async (req, res) => {
   res.render('search', {
-    logged_in: req.session.logged_in
+    logged_in: req.session.logged_in,
+    name: req.session.name
   });
 });
 
 router.get('/results', withAuth, async (req, res) => {
   res.render('results', {
-    logged_in: req.session.logged_in
+    logged_in: req.session.logged_in,
+    name: req.session.name
   });
 });
 
@@ -56,7 +58,8 @@ router.get('/favorites', async (req, res) => {
 
     res.render('favorites', {
       // ...favorite,
-      logged_in: req.session.logged_in
+      logged_in: req.session.logged_in,
+      name: req.session.name
     });
   } catch (err) {
     res.status(500).json(err);

@@ -75,6 +75,10 @@ nav ul {
   cursor: pointer;
 }
 
+.nav-hover:hover {
+  text-decoration: underline;
+}
+
 .nav-hover:link, .nav-hover:visited {
   color: var(--black);
 }
