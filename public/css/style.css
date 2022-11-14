@@ -60,9 +60,17 @@ nav ul {
   color: gold;
 }
 
-.username{
+.username {
   font-size: 130%;
   font-weight: 600;
+  color: var(--black);
+  text-decoration: none;
+}
+
+.username:hover {
+  text-decoration: underline;
+  color: var(--gold);
+  font-size: 130%;
 }
 
 .nav-logged-in {
@@ -75,15 +83,12 @@ nav ul {
   cursor: pointer;
 }
 
-.nav-hover:hover {
-  text-decoration: underline;
-}
-
 .nav-hover:link, .nav-hover:visited {
   color: var(--black);
 }
 
 .nav-hover:hover {
+  text-decoration: underline;
   font-size: 150%;
   color: gold;
 }

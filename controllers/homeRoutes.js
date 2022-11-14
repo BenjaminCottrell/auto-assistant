@@ -22,7 +22,6 @@ router.get('/', async (req, res) => {
       favorites, 
       logged_in: req.session.logged_in,
       name: req.session.name,
-      id: req.session.id
     });
   } catch (err) {
     res.status(500).json(err);
@@ -33,7 +32,6 @@ router.get('/search', withAuth, async (req, res) => {
   res.render('search', {
     logged_in: req.session.logged_in,
     name: req.session.name,
-    id: req.session.id
   });
 });
 
