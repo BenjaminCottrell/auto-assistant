@@ -1,20 +1,19 @@
-const request = require('request');
 
-function getCars(model) {
-  // Add conditionals if form isnt fully filled out
-    request.get({
-  url: 'https://api.api-ninjas.com/v1/cars?&limit=30&model=' + model,
-  headers: {
-    'X-Api-Key': 'R/ueMf8x3oDZnVkrK0l+ig==29U6y1LjRgDDhUGr'
-  },
-}, function(error, response, body) {
-  if(error) return console.error('Request failed:', error);
-  else if(response.statusCode != 200) return console.error('Error:', response.statusCode);
-  else {
-    var cars = JSON.parse(body)
+function getCars(make, model, year) {
+$.ajax({
+  method: 'GET',
+  url:  `https://api.api-ninjas.com/v1/cars?&limit=30&make=${make}&model=${model}&year=${year}`,
+  headers: { 'X-Api-Key': 'R/ueMf8x3oDZnVkrK0l+ig==29U6y1LjRgDDhUGr'},
+  contentType: 'application/json',
+  success: function(result) {
+    var cars = result;
     cars.sort( function ( a, b ) { return b.year - a.year; } );
     console.log(cars)
-    }
+    //return cars;
+  },
+  error: function ajaxError(jqXHR) {
+      console.error('Error: ', jqXHR.responseText);
+  }
 });
 }
 
@@ -42,5 +41,19 @@ const addFavorite = async (event) => {
   }
 };
 
+const searchFormHandler = async (event) => {
+  console.log("Search working");
+  event.preventDefault();
 
-getCars("camry");
+  const make = document.querySelector('#make-search').value.trim();
+  const model = document.querySelector('#model-search').value.trim();
+  const year = document.querySelector('#year-search').value.trim();
+ console.log( getCars(make, model, year));
+  getCars(make, model, year);
+  
+  //document.location.replace('/results');
+};
+
+document
+  .querySelector('.search-form')
+  .addEventListener('submit', searchFormHandler);
