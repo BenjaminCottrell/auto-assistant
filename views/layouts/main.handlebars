@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<!----- Header ----->
+<!--- Header --->
 <body id="banner">
     <header>
         <a class="logo" href="/"><h1>AutoAssistant</h1></a>
         <nav class="">
             {{#if logged_in}}
             <ul class="user-nav">
-                <li class="username">Welcome {{name}}</li>
+                <li><a class="username" href="/favorites">{{name}}</a></li>
             </ul>
             <ul class="user-nav">
                 <li><a class="nav-logged-in nav-hover" href="/" id="">Home</a></li>
@@ -36,11 +36,11 @@
 
         </nav>
     </header>
-<!----- Main ----->    
+<!--- Main --->    
     <main>
     {{{body}}}
     </main>
-<!----- Footer ----->
+<!--- Footer --->
     <footer class="" id="footer">
         <div class="">
             <p>
