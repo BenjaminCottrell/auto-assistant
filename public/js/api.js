@@ -1,9 +1,10 @@
-const request = require('request');
+ const request = require('request');
 
-function getCars(model) {
+function getCars(make, model, year) {
+ 
   // Add conditionals if form isnt fully filled out
-    request.get({
-  url: 'https://api.api-ninjas.com/v1/cars?&limit=30&model=' + model,
+  request.get({
+  url: `https://api.api-ninjas.com/v1/cars?&limit=30&make=${make}&model=${model}&year=${year}` ,
   headers: {
     'X-Api-Key': 'R/ueMf8x3oDZnVkrK0l+ig==29U6y1LjRgDDhUGr'
   },
@@ -42,5 +43,23 @@ const addFavorite = async (event) => {
   }
 };
 
+const searchFormHandler = async (event) => {
+  console.log("Search working");
+  event.preventDefault();
 
-getCars("camry");
+  const make = document.querySelector('#make-search').value.trim();
+  const model = document.querySelector('#model-search').value.trim();
+  const year = document.querySelector('#year-search').value.trim();
+ 
+  getCars(make, model, year);
+  
+  if (response.ok) {
+    document.location.replace('/results');
+  } else {
+    alert(response.statusText);
+  }
+};
+
+document
+  .querySelector('.search-form')
+  .addEventListener('submit', searchFormHandler);
