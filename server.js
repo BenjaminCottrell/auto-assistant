@@ -45,5 +45,3 @@ app.use(routes);
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log(`Now listening on: http://localhost:${PORT}`));
 });
-
-module.exports = function (n) { return n * 111 }
