@@ -115,7 +115,7 @@ main {
 #info-box {
   display: flex;
   justify-content: center;
-  padding-top: 175px;
+  padding-top: 115px;
 }
 
 #app-desc {
@@ -128,7 +128,7 @@ main {
   min-height: 250px;
   border-radius: 10px;
   padding: 10px;
-  margin-bottom: 175px;
+  margin-bottom: 115px;
 }
 
 #welcome {
@@ -296,19 +296,23 @@ h2 {
   margin-left: 20px;
 }
 
-.car-name {
-  margin: 0px 0px 10px 0px;
-  text-decoration: underline;
-  font-size: 30px;
+.car-header {
+  border-bottom: 1px solid var(--black);
 }
 
-.car-trans, .car-mpg {
-  margin: 0px 0px 5px 0px;
+.car-make, .car-model, .car-year {
+  margin: 0px 0px 10px 0px;
+  font-size: 32px;
+  padding-right: 10px;
+}
+
+.car-data1, .car-data2 {
+  margin: 14px 0px 14px 0px;
   font-size: 20px;
   font-weight: bolder;
 }
 
-#car-data {
+.car-drive, .car-trans, .car-cyl, .car-mpg {
   font-weight: 500;
-  padding-right: 12px;
+  padding-right: 50px;
 }
