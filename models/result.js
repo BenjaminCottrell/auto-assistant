@@ -41,6 +41,14 @@ Result.init(
     }
   },
   {
+  hooks: {
+    beforeCreate: async (newResultData) => {
+      newResultData.make = newResultData.make.charAt(0).toUpperCase() + newResultData.make.slice(1);
+      newResultData.model = newResultData.model.charAt(0).toUpperCase() + newResultData.model.slice(1);
+      return newResultData;
+    },
+  },
+
     sequelize,
     timestamps: false,
     freezeTableName: true,
