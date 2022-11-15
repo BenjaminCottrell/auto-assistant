@@ -35,6 +35,41 @@
                             <h2>Results</h2>
                             <div class="result-placer">
                                 <div class="form-container">
+                                    <form class="form search-form">
+                                        <div class="form-group">
+                                            {{#each results as |result|}}
+                                            <div class="display-container">
+                                                <div class="image-container">
+                                                    <div class="vehicle-image">vehicle image</div>
+                                                    <div class="vehicle-favorite">Favorite Vehicle</div>                                            
+                                                </div>
+                                                <div class="content-container">
+                                                    <h2 class="car-name">{{make}} {{model}} {{year}}</h2>
+                                                    <div class="car-trans">Drive Type: {{drive}} Transmission: {{trans}}</div>
+                                                    <div class="car-mpg"># of cylinders: {{cylinders}} MPG: {{mpg}}</div>
+                                                </div>
+                                            
+                                                {{/each}}
+        
+                                                
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="" id="fig-contain">
+            <div class="" id="info-box">
+                <div id="app-desc">
+                    <div class="results-wrapper">
+                        <div class="results-container">
+                            <h2>Results</h2>
+                            <div class="result-placer">
+                                <div class="form-container">
                                         <form class="form search-form">
                                             <div class="form-group">
                                                 <div class="result">
@@ -46,7 +81,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!----- favorites ----->  
         <!-----  <div class="" id="fig-contain">
             <div class="" id="info-box">

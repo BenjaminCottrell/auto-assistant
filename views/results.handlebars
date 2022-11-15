@@ -3,29 +3,24 @@
         <div id="app-desc">
             <div class="results-wrapper">
                 <div class="results-container">
-                    <h2>Results</h2>
-                    <div class="result-placer">
+                    <h2 id="results-title">Results</h2>
+                    <div class="columns result-placer">
                         <div class="form-container">
-                            <form class="form search-form">
-                                <div class="form-group">
+                                <div class="center-results">
                                     {{#each results as |result|}}
                                     <div class="display-container">
                                         <div class="image-container">
                                             <div class="vehicle-image">vehicle image</div>
-                                            <div class="vehicle-favorite">Favorite Vehicle</div>                                            
+                                            <div class="vehicle-favorite">Favorite Vehicle<i class="fa-solid fa-heart" id="results-heart"></i></div>                                            
                                         </div>
                                         <div class="content-container">
                                             <h2 class="car-name">{{make}} {{model}} {{year}}</h2>
-                                            <div class="car-trans">Drive Type: {{drive}} Transmission: {{trans}}</div>
-                                            <div class="car-mpg"># of cylinders: {{cylinders}} MPG: {{mpg}}</div>
+                                            <div class="car-trans">Drive Type: <span id="car-data">{{drive}}</span> Trans: <span id="car-data">{{trans}}</span></div>
+                                            <div class="car-mpg"># of cylinders: <span id="car-data">{{cylinders}}</span> MPG: <span id="car-data">{{mpg}}</span></div>
                                         </div>
-                                    
-                                        {{/each}}
-
-                                        
                                     </div>
+                                    {{/each}}
                                 </div>
-                            </form>
                         </div>
                     </div>
                 </div>
