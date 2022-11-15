@@ -16,13 +16,22 @@ $.ajax({
   }
 });
 }
+
 const createResultsTable = async (data) => {
+  const response = await fetch('/api/result', {
+    method: 'DELETE',
+  });
+  if (response.ok) {
+    console.log("DELETE works");
+  } else {
+    alert(response.statusText);
+  }
+  
   for (let i = 0; i < data.length; i++) {
     const element = data[i];
     const make = element.make.trim();
     const model = element.model.trim();
     const year = element.year;
-    const type = element.class.trim();
     const drive = element.drive.trim();
     const trans = element.transmission.trim();
     const cylinders = element.cylinders;
@@ -43,47 +52,6 @@ const createResultsTable = async (data) => {
   }
   document.location.replace('/results');
 };
-
-function apendData(data) {
-  console.log("page changed");
-
-    
-    for (let i = 0; i < data.length; i++) {
-      const element = data[i];
-      const make = element.make.trim();
-      const model = element.model.trim();
-      const year = element.year;
-      const type = element.class.trim();
-      const drive = element.drive.trim();
-      const trans = element.transmission.trim();
-      const cylinders = element.cylinders;
-      const mpg = element.combination_mpg;
-      
-  
-  
-      var cardEl = $("<div class='result'></div>")
-      $(".form-group").append(cardEl); 
-  
-      //Create elements and append it to card
-      var makeEl = $("<h3></h3>").text(make).css("text-align","center");
-      var modelEl = $("<h3></h3>").text(model).css("text-align","center");
-      var yearEl = $("<h3></h3>").text(year).css("text-align","center");
-      var typeEl = $("<h3></h3>").text(type).css("text-align","center");
-      var driveEl = $("<h3></h3>").text(drive).css("text-align","center");
-      var transEl = $("<h3></h3>").text(trans).css("text-align","center");
-      var cylindersEl = $("<h3></h3>").text(cylinders).css("text-align","center");
-      var mpgEl = $("<h3></h3>").text(mpg).css("text-align","center");
-      //var FavoriteEl = $("<h3></h3>").text().css("text-align","center");
-      $(cardEl).append(makeEl, modelEl, yearEl, typeEl, driveEl, transEl, cylindersEl, mpgEl);
-      
-  
-    }
-
-
-  
-  
-}
-
 
 const addFavorite = async (event) => {
   event.preventDefault();

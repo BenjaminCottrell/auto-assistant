@@ -17,18 +17,9 @@ router.post('/', async (req, res) => {
 });
 
 router.delete('/', withAuth, async (req, res) => {
+  console.log("DELETE CALLED");
   try {
-    const resultData = await Result.destroy({
-      /*where: {
-        id: req.params.id,
-        user_id: req.session.user_id,
-      },*/
-    });
-
-    if (!resultData) {
-      res.status(404).json({ message: 'no information to delete' });
-      return;
-    }
+    const resultData = await Result.destroy({ truncate : true, cascade: false });
 
     res.status(200).json(resultData);
   } catch (err) {
