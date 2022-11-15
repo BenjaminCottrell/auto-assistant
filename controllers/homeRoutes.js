@@ -39,11 +39,9 @@ router.get('/results', withAuth, async (req, res) => {
   try {
     // Get all results
     const resultData = await Result.findAll();
-    console.log(resultData);
 
     // Serialize data so the template can read it
     const results = resultData.map((result) => result.get({ plain: true }));
-    console.log(results);
 
     // Pass serialized data and session flag into template
     res.render('results', { 
