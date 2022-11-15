@@ -23,10 +23,6 @@ Favorite.init(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    class: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
     drive: {
       type: DataTypes.STRING,
       allowNull: false,

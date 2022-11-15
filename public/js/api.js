@@ -1,4 +1,3 @@
-
 function getCars(make, model, year) {
 $.ajax({
   method: 'GET',
@@ -58,17 +57,16 @@ const addFavorite = async (event) => {
 
   const make = cars[i].make.trim();
   const model = cars[i].model.trim();
-  const year = cars[i].year.trim();
-  const type = cars[i].class.trim();
+  const year = cars[i].year;
   const drive = cars[i].drive.trim();
   const trans = cars[i].transmission.trim();
-  const cylinders = cars[i].cylinders.trim();
-  const mpg = cars[i].combination_mpg.trim();
+  const cylinders = cars[i].cylinders;
+  const mpg = cars[i].combination_mpg;
 
 
   const response = await fetch('/api/favorites', {
     method: 'POST',
-    body: JSON.stringify({ make, model, year, type, drive, trans, cylinders, mpg }),
+    body: JSON.stringify({ make, model, year, drive, trans, cylinders, mpg }),
     headers: { 'Content-Type': 'application/json' },
   });
 
@@ -84,10 +82,16 @@ const searchFormHandler = async (event) => {
   const make = document.querySelector('#make-search').value.trim();
   const model = document.querySelector('#model-search').value.trim();
   const year = document.querySelector('#year-search').value.trim();
- //console.log( getCars(make, model, year));
   getCars(make, model, year);
 };
+
+const favoriteButtonHandeler = async (event) =>{
+  var search = $(this).parent().parent().children(".")
+}
 
 document
   .querySelector('.search-form')
   .addEventListener('submit', searchFormHandler);
+document
+  .querySelector('.results-heart')
+  .addEventListener('click', favoriteButtonHandeler);
