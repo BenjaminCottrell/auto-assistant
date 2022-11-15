@@ -86,12 +86,32 @@ const searchFormHandler = async (event) => {
 };
 
 const favoriteButtonHandeler = async (event) =>{
-  var search = $(this).parent().parent().children(".")
+  event.preventDefault();
+  console.log("It works?");
+  let make = event.target.parentElement.parentElement.parentElement.children[1].children[0].children[0].innerText;
+  let model = event.target.parentElement.parentElement.parentElement.children[1].children[0].children[1].innerText;
+  let year = event.target.parentElement.parentElement.parentElement.children[1].children[0].children[2].innerText;
+  let drive = event.target.parentElement.parentElement.parentElement.children[1].children[1].children[0].innerText;
+  let trans = event.target.parentElement.parentElement.parentElement.children[1].children[1].children[1].innerText;
+  let cylinders = event.target.parentElement.parentElement.parentElement.children[1].children[2].children[0].innerText;
+  let mpg = event.target.parentElement.parentElement.parentElement.children[1].children[2].children[1].innerText;
+  console.log(make, model, year, drive, trans, cylinders, mpg);
+  const response = await fetch('/api/favorites', {
+    method: 'POST',
+    body: JSON.stringify({ make, model, year, drive, trans, cylinders, mpg }),
+    headers: { 'Content-Type': 'application/json' },
+  });
+
+  if (!response.ok) {
+    alert(response.statusText);
+  }
 }
 
-document
-  .querySelector('.search-form')
-  .addEventListener('submit', searchFormHandler);
+// document
+//   .querySelector('.search-form')
+//   .addEventListener('submit', searchFormHandler);
 document
   .querySelector('.results-heart')
   .addEventListener('click', favoriteButtonHandeler);
+
+//$(document).on("click", ".results-heart", favoriteButtonHandeler);
