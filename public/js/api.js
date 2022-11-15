@@ -16,7 +16,6 @@ $.ajax({
   }
 });
 }
-
 const createResultsTable = async (data) => {
   for (let i = 0; i < data.length; i++) {
     const element = data[i];
@@ -37,13 +36,12 @@ const createResultsTable = async (data) => {
       headers: { 'Content-Type': 'application/json' },
     });
     if (response.ok) {
-      console.log("It works");
+      console.log("Post works");
     } else {
       alert(response.statusText);
     }
-
   }
-      document.location.replace('/results');
+  document.location.replace('/results');
 };
 
 function apendData(data) {

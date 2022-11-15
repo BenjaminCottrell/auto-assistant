@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Favorite, User } = require('../models');
+const { Favorite, User, Result } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -36,11 +36,25 @@ router.get('/search', withAuth, async (req, res) => {
 });
 
 router.get('/results', withAuth, async (req, res) => {
-  res.render('results', {
-    logged_in: req.session.logged_in,
-    name: req.session.name,
-    id: req.session.id
-  });
+  try {
+    // Get all results
+    const resultData = await Result.findAll();
+    console.log(resultData);
+
+    // Serialize data so the template can read it
+    const results = resultData.map((result) => result.get({ plain: true }));
+    console.log(results);
+
+    // Pass serialized data and session flag into template
+    res.render('results', { 
+      results, 
+      logged_in: req.session.logged_in,
+      name: req.session.name,
+      id: req.session.id
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 router.get('/favorites', async (req, res) => {
