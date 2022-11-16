@@ -20,7 +20,7 @@
                                         </div>
                                     </div>
                                     <div class="notes-container">
-                                        <textarea class="notes-box" rows="3" placeholder="Input vehicle notes..."></textarea>
+                                        <textarea class="notes-box" rows="3" placeholder="Input vehicle notes...">{{#if notes}}{{notes}}{{/if}}</textarea>
                                         <p class="save"><i class="fa-solid fa-floppy-disk floppy"></i>Save Notes</i></p>
                                     </div>
                                     {{/each}}
@@ -32,4 +32,5 @@
         </div>
     </div>    
 </div>
+<script src="./js/delete.js"></script>
 <script src="./js/edit.js"></script>
