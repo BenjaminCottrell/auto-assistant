@@ -1,17 +1,16 @@
 const favoriteButtonHandeler = async (event) =>{
     event.preventDefault();
     console.log("It works?");
-    let make = event.target.id;
-    console.log(make);
-    // const response = await fetch('/api/favorites', {
-    //   method: 'POST',
-    //   body: JSON.stringify({ make, model, year, drive, trans, cylinders, mpg }),
-    //   headers: { 'Content-Type': 'application/json' },
-    // });
-  
-    // if (!response.ok) {
-    //   alert(response.statusText);
-    // }
+    let id = event.target.id;
+    const response = await fetch(`/api/favorites/${id}`, {
+      method: 'DELETE',
+    });
+
+    if (response.ok) {
+        document.location.replace('/favorites');
+      } else {
+        alert('Failed to delete car');
+      }
   }
 
 var heart = document.querySelectorAll(".garbage");
