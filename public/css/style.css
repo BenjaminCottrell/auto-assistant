@@ -244,7 +244,7 @@ h2 {
   text-decoration: none;
 }
 
-/*----- Results Partial -----*/
+/*----- Results Partial / Favorites Partial -----*/
 .result-placer {
   display: flex;
   flex-direction: column;
@@ -290,9 +290,45 @@ h2 {
   color: red;
 }
 
+.garbage {
+  color: rgb(54, 54, 54);
+  padding-left: 5px;
+  cursor: pointer;
+}
+
+.garbage:hover {
+  color: rgb(110, 110, 110);
+}
+
+.floppy {
+  color: rgb(0, 0, 0);
+  padding-right: 5px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.floppy:hover {
+  color: var(--blue);
+}
+
+.save {
+  text-align: left;
+  margin: 5px;
+  font-size: 18px;
+}
+
+.notes-container {
+  padding: 10px;
+}
+
+textarea {
+  width: 730px;
+  resize: none;
+}
+
 .content-container {
   text-align: left;
-  min-width: 440px;
+  min-width: 460px;
   margin-left: 20px;
 }
 
