@@ -2,6 +2,11 @@ const router = require('express').Router();
 const { Favorite, User, Result } = require('../models');
 const withAuth = require('../utils/auth');
 
+router.get('/404', (req,res) => {
+  res.render('404')
+}) 
+
+
 router.get('/', async (req, res) => {
   try {
     // Get all favorites and JOIN with user data
