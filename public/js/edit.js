@@ -16,4 +16,12 @@ const favoriteButtonHandeler = async (event) =>{
 var garbage = document.querySelectorAll(".garbage");
 
 garbage.forEach(function(e){
-  e.addEventListener('click', favoriteButtonHandeler)});
+  e.addEventListener('click', favoriteButtonHandeler)
+});
+
+var floppy = document.querySelectorAll(".floppy");
+
+floppy.forEach(function(e){
+  e.addEventListener('click', () =>
+  e.classList.add('animate__animated', 'animate__flipInY'));
+});
