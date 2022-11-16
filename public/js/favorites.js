@@ -23,4 +23,7 @@ const favoriteButtonHandeler = async (event) =>{
 var heart = document.querySelectorAll(".results-heart");
 
 heart.forEach(function(e){
-  e.addEventListener('click', favoriteButtonHandeler)});
+  e.addEventListener('click', favoriteButtonHandeler)
+  e.addEventListener('click', () =>
+  e.classList.add('animate__animated', 'animate__heartBeat'));
+});
