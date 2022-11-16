@@ -11,7 +11,7 @@
                                             <div class="display-container">
                                                 <div class="image-container">
                                                     <div class="vehicle-image"></div>
-                                                    <div class="vehicle-favorite">Delete Vehicle<i class="fa-solid fa-trash-can results-heart" id="{{id}}"></i></div>                                            
+                                                    <div class="vehicle-favorite">Delete Vehicle<i class="fa-solid fa-trash-can garbage" id="{{id}}"></i></div>                                            
                                                 </div>
                                                 <div class="content-container">
                                                     <div class="car-header"><span class="car-make">{{make}}</span><span class="car-model">{{model}}</span><span class="car-year">{{year}}</span></div>
@@ -19,9 +19,9 @@
                                                     <div class="car-data2"># of cylinders: <span class="car-cyl">{{cylinders}}</span> MPG: <span class="car-mpg">{{mpg}}</span></div>
                                                 </div>
                                             </div>
-                                            <div>
-                                                <p>Notes:</p>
-                                                <textarea placeholder="Input vehicle notes..."></textarea>
+                                            <div class="notes-container">
+                                                <textarea class="notes-box" rows="3" placeholder="Input vehicle notes..."></textarea>
+                                                <p class="save"><i class="fa-solid fa-floppy-disk floppy"></i>Save Notes</i></p>
                                             </div>
                                             {{/each}}
                                         </div>
