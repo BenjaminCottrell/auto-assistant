@@ -1,6 +1,7 @@
 const favoriteButtonHandeler = async (event) =>{
     event.preventDefault();
     console.log("It works?");
+    event.target.setAttribute('style', 'color: red');
     let make = event.target.parentElement.parentElement.parentElement.children[1].children[0].children[0].innerText;
     let model = event.target.parentElement.parentElement.parentElement.children[1].children[0].children[1].innerText;
     let year = event.target.parentElement.parentElement.parentElement.children[1].children[0].children[2].innerText;
@@ -23,4 +24,7 @@ const favoriteButtonHandeler = async (event) =>{
 var heart = document.querySelectorAll(".results-heart");
 
 heart.forEach(function(e){
-  e.addEventListener('click', favoriteButtonHandeler)});
+  e.addEventListener('click', favoriteButtonHandeler)
+  e.addEventListener('click', () =>
+  e.classList.add('animate__animated', 'animate__heartBeat'));
+});
