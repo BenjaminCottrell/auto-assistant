@@ -269,10 +269,12 @@ h2 {
 }
 
 .vehicle-image {
-  min-width: 150px;
-  min-height: 300px;
-  background-color: var(--black);
-  padding: 5px;
+  width: 768px;
+  height: 450px;
+  background-size: fill;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 .vehicle-favorite {
