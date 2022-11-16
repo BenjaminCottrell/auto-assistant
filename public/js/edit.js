@@ -13,7 +13,7 @@ const favoriteButtonHandeler = async (event) =>{
       }
   }
 
-var heart = document.querySelectorAll(".garbage");
+var garbage = document.querySelectorAll(".garbage");
 
-heart.forEach(function(e){
+garbage.forEach(function(e){
   e.addEventListener('click', favoriteButtonHandeler)});
