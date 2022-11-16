@@ -269,7 +269,7 @@ h2 {
 }
 
 .vehicle-image {
-  width: 768px;
+  width: 774px;
   height: 450px;
   background-size: fill;
   background-repeat: no-repeat;
@@ -314,7 +314,7 @@ h2 {
 
 .save {
   text-align: left;
-  margin: 5px;
+  margin: 5px 0px 5px 0px;
   font-size: 18px;
 }
 
@@ -323,7 +323,7 @@ h2 {
 }
 
 textarea {
-  width: 730px;
+  width: 768px;
   resize: none;
 }
 
