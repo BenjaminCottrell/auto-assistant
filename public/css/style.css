@@ -337,7 +337,7 @@ textarea {
 }
 
 .car-make, .car-model, .car-year {
-  margin: 0px 0px 10px 0px;
+  margin: -10px 0px 10px 0px;
   font-size: 32px;
   padding-right: 10px;
 }
@@ -351,4 +351,36 @@ textarea {
 .car-drive, .car-trans, .car-cyl, .car-mpg {
   font-weight: 500;
   padding-right: 50px;
+}
+
+/*----- 404 Partial -----*/
+.img-404 {
+  margin: -16px 0px -10px 0px;
+  padding-bottom: 10px;
+  background-image: url("/assets/images/404-car.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  min-height: calc(100vh - 234px);
+}
+
+.text-container {
+  color: white;
+  margin-top: 16px;
+  padding-left: 10px;
+  font-size: 48px;
+  font-weight: bolder;
+  text-shadow: 6px 6px 5px var(--black);
+}
+
+.error {
+  color: rgb(209, 30, 30);
+  
+}
+
+.home {
+  color: white;
+  text-decoration: underline;
+  font-style: italic;
 }
