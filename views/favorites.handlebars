@@ -1,34 +1,35 @@
-        <div class="" id="fig-contain">
-            <div class="" id="info-box">
-                <div id="app-desc">
-                    <div class="favorite-wrapper">
-                        <div class="favorite-container">
-                          <h2>Favorites</h2>
-                            <div class="result-placer">
-                                <div class="form-container">
-                                        <div class="center-results">
-                                            {{#each favorites as |favorite|}}
-                                            <div class="display-container">
-                                                <div class="image-container">
-                                                    <div class="vehicle-image"></div>
-                                                    <div class="vehicle-favorite">Delete Vehicle<i class="fa-solid fa-trash-can garbage" id="{{id}}"></i></div>                                            
-                                                </div>
-                                                <div class="content-container">
-                                                    <div class="car-header"><span class="car-make">{{make}}</span><span class="car-model">{{model}}</span><span class="car-year">{{year}}</span></div>
-                                                    <div class="car-data1">Drive Type: <span class="car-drive">{{drive}}</span> Trans: <span class="car-trans">{{trans}}</span></div>
-                                                    <div class="car-data2"># of cylinders: <span class="car-cyl">{{cylinders}}</span> MPG: <span class="car-mpg">{{mpg}}</span></div>
-                                                </div>
-                                            </div>
-                                            <div class="notes-container">
-                                                <textarea class="notes-box" rows="3" placeholder="Input vehicle notes..."></textarea>
-                                                <p class="save"><i class="fa-solid fa-floppy-disk floppy"></i>Save Notes</i></p>
-                                            </div>
-                                            {{/each}}
+<div class="" id="fig-contain">
+    <div class="" id="info-box">
+        <div id="app-desc">
+            <div class="favorite-wrapper">
+                <div class="favorite-container">
+                    <h2>Favorites</h2>
+                    <div class="result-placer">
+                        <div class="form-container">
+                                <div class="center-results">
+                                    {{#each favorites as |favorite|}}
+                                    <div class="display-container">
+                                        <div class="image-container">
+                                            <div class="vehicle-image"></div>
+                                            <div class="vehicle-favorite">Delete Vehicle<i class="fa-solid fa-trash-can garbage" id="{{id}}"></i></div>                                            
                                         </div>
+                                        <div class="content-container">
+                                            <div class="car-header"><span class="car-make">{{make}}</span><span class="car-model">{{model}}</span><span class="car-year">{{year}}</span></div>
+                                            <div class="car-data1">Drive Type: <span class="car-drive">{{drive}}</span> Trans: <span class="car-trans">{{trans}}</span></div>
+                                            <div class="car-data2"># of cylinders: <span class="car-cyl">{{cylinders}}</span> MPG: <span class="car-mpg">{{mpg}}</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="notes-container">
+                                        <textarea class="notes-box" rows="3" placeholder="Input vehicle notes..."></textarea>
+                                        <p class="save"><i class="fa-solid fa-floppy-disk floppy"></i>Save Notes</i></p>
+                                    </div>
+                                    {{/each}}
                                 </div>
-                            </div>
                         </div>
-                      </div>
+                    </div>
                 </div>
-            </div>    
+                </div>
         </div>
+    </div>    
+</div>
+<script src="./js/edit.js"></script>
