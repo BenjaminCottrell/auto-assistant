@@ -52,29 +52,6 @@ const createResultsTable = async (data) => {
   document.location.replace('/results');
 };
 
-const addFavorite = async (event) => {
-  event.preventDefault();
-
-  const make = cars[i].make.trim();
-  const model = cars[i].model.trim();
-  const year = cars[i].year;
-  const drive = cars[i].drive.trim();
-  const trans = cars[i].transmission.trim();
-  const cylinders = cars[i].cylinders;
-  const mpg = cars[i].combination_mpg;
-
-
-  const response = await fetch('/api/favorites', {
-    method: 'POST',
-    body: JSON.stringify({ make, model, year, drive, trans, cylinders, mpg }),
-    headers: { 'Content-Type': 'application/json' },
-  });
-
-  if (!response.ok) {
-    alert(response.statusText);
-  }
-};
-
 const searchFormHandler = async (event) => {
   console.log("Search working");
   event.preventDefault();
@@ -85,33 +62,7 @@ const searchFormHandler = async (event) => {
   getCars(make, model, year);
 };
 
-const favoriteButtonHandeler = async (event) =>{
-  event.preventDefault();
-  console.log("It works?");
-  let make = event.target.parentElement.parentElement.parentElement.children[1].children[0].children[0].innerText;
-  let model = event.target.parentElement.parentElement.parentElement.children[1].children[0].children[1].innerText;
-  let year = event.target.parentElement.parentElement.parentElement.children[1].children[0].children[2].innerText;
-  let drive = event.target.parentElement.parentElement.parentElement.children[1].children[1].children[0].innerText;
-  let trans = event.target.parentElement.parentElement.parentElement.children[1].children[1].children[1].innerText;
-  let cylinders = event.target.parentElement.parentElement.parentElement.children[1].children[2].children[0].innerText;
-  let mpg = event.target.parentElement.parentElement.parentElement.children[1].children[2].children[1].innerText;
-  console.log(make, model, year, drive, trans, cylinders, mpg);
-  const response = await fetch('/api/favorites', {
-    method: 'POST',
-    body: JSON.stringify({ make, model, year, drive, trans, cylinders, mpg }),
-    headers: { 'Content-Type': 'application/json' },
-  });
 
-  if (!response.ok) {
-    alert(response.statusText);
-  }
-}
-
-// document
-//   .querySelector('.search-form')
-//   .addEventListener('submit', searchFormHandler);
 document
-  .querySelector('.results-heart')
-  .addEventListener('click', favoriteButtonHandeler);
-
-//$(document).on("click", ".results-heart", favoriteButtonHandeler);
+  .querySelector('.search-form')
+  .addEventListener('submit', searchFormHandler);
