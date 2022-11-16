@@ -353,6 +353,14 @@ textarea {
   padding-right: 50px;
 }
 
+.sorry-fav {
+  font-size: 30px;
+}
+
+.guide-fav {
+  font-size: 20px;
+}
+
 /*----- 404 Partial -----*/
 .img-404 {
   margin: -16px 0px -10px 0px;
