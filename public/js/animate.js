@@ -1,5 +1,5 @@
-const element = document.querySelector('.results-heart');
+const heartbutton = document.querySelectorAll('.results-heart');
 
-element.addEventListener('click', () => 
-    element.classList.add('animate__animated', 'animate__heartBeat'));
-
+heartbutton.forEach(function(element) {
+    addEventListener('click', () => 
+    element.classList.add('animate__animated', 'animate__heartBeat'))});
