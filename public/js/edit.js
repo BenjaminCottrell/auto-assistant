@@ -25,10 +25,8 @@ const saveButtonHandeler = async (event) =>{
 var save = document.querySelectorAll(".floppy");
 
 save.forEach(function(e){
+  e.addEventListener('click', saveButtonHandeler)
   e.addEventListener('click', () =>
-  e.classList.add('animate__animated', 'animate__flipInY'));
+  e.classList.add('animate__animated', 'animate__flipInY'))
 });
-
-save.forEach(function(e){
-  e.addEventListener('click', saveButtonHandeler)});
 
