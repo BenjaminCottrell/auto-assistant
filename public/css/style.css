@@ -147,6 +147,10 @@ main {
   font-weight: 500;
 }
 
+.welcome-desc {
+  font-size: 18px;
+}
+
 /*----- Footer -----*/
 #footer {
   display: flex;
