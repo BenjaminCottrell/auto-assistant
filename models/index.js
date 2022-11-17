@@ -12,3 +12,5 @@ Favorite.belongsTo(User, {
 });
 
 module.exports = { User, Favorite, Result };
+
+// random comment so that I can commit these renamed files
