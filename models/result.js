@@ -58,7 +58,7 @@ Result.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'result',
+    modelName: 'Result',
   }
 );
 
