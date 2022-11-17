@@ -259,7 +259,6 @@ h2 {
 }
 
 .display-container {
-  display: flex;
   min-width: 600px;
   padding: 10px;
   font-weight: 600;
@@ -270,10 +269,12 @@ h2 {
 }
 
 .vehicle-image {
-  min-width: 150px;
-  min-height: 150px;
-  background-color: var(--black);
-  padding: 5px;
+  width: 774px;
+  height: 450px;
+  background-size: fill;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 .vehicle-favorite {
@@ -313,23 +314,22 @@ h2 {
 
 .save {
   text-align: left;
-  margin: 5px;
+  margin: 5px 0px 5px 0px;
   font-size: 18px;
 }
 
 .notes-container {
-  padding: 10px;
+  padding: 10px 0px 10px 0px;
 }
 
 textarea {
-  width: 730px;
+  width: 768px;
   resize: none;
 }
 
 .content-container {
   text-align: left;
-  min-width: 460px;
-  margin-left: 20px;
+  min-width: 580px;
 }
 
 .car-header {

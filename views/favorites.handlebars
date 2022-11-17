@@ -11,7 +11,7 @@
                                     {{#each favorites as |favorite|}}
                                     <div class="display-container">
                                         <div class="image-container">
-                                            <div class="vehicle-image"></div>
+                                            <img src="/assets/images/car-placeholder.jpg" alt="This is an image of a car" class="vehicle-image"></img>
                                             <div class="vehicle-favorite">Delete Vehicle<i class="fa-solid fa-trash-can garbage" id="{{id}}"></i></div>                                            
                                         </div>
                                         <div class="content-container">
@@ -27,7 +27,7 @@
                                     {{/each}}
                                     {{else}}
                                     <p class="sorry-fav">Sorry, you do not have any favorites at this time.</p>
-                                    <p class="guide-fav">To add a vehicle to your favorites, simply search for a vehicle and press the heart below the vehicle image.</p>
+                                    <p class="guide-fav">To add a vehicle to your favorites, simply <a class="search-link" href="/search">search</a> for a vehicle and press the heart below the vehicle image.</p>
                                     {{/if}}
                                 </div>
                         </div>
@@ -39,4 +39,3 @@
 </div>
 <script src="./js/delete.js"></script>
 <script src="./js/edit.js"></script>
->>>>>>>>> Temporary merge branch 2
